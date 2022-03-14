@@ -1,0 +1,9 @@
+#!/bin/bash -
+
+function echo_run()
+{
+    echo "$@"
+    "$@"
+}
+
+colordiff <(grep -vE '^\s*(#|$)' $1)  <(grep -vE '^\s*(#|$)' $2)
